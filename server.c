@@ -6,7 +6,7 @@
 /*   By: dabi-rac <dabi-rac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/18 17:49:59 by dabi-rac          #+#    #+#             */
-/*   Updated: 2023/03/19 19:35:23 by dabi-rac         ###   ########.fr       */
+/*   Updated: 2023/03/23 23:12:39 by dabi-rac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ int	main(void)
 	struct sigaction	siga;
 
 	pid = getpid();
-	printf("PID: %d\n", pid);
+	ft_printf("PID: %d\n", pid);
 	siga.sa_sigaction = &ditto;
 	siga.sa_flags = SA_SIGINFO;
 	sigaction(SIGUSR1, &siga, NULL);
